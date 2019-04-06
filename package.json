@@ -1,0 +1,35 @@
+{
+  "name": "speechsyntisizer_telegrambot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flamewow/SpeechSyntisizer_telegramBot.git"
+  },
+  "author": "Ilya Moroz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flamewow/SpeechSyntisizer_telegramBot/issues"
+  },
+  "homepage": "https://github.com/flamewow/SpeechSyntisizer_telegramBot#readme",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "languagedetect": "^1.2.0",
+    "node-telegram-bot-api": "^0.30.0",
+    "say": "^0.15.0"
+  },
+  "devDependencies": {
+    "pm2": "^3.4.1",
+    "nodemon": "^1.18.10",
+    "standard": "^12.0.1"
+  },
+  "scripts": {
+    "lint": "standard \"./src/**/*.js\"",
+    "lint:fix": "standard \"./src/**/*.js\" --fix",
+    "dev": "NODE_ENV=development NODE_PATH=$NODE_PATH:./src nodemon src",
+    "rebuild": "rm -rf dist && babel src --out-dir dist --copy-files",
+    "start": "NODE_ENV=development NODE_PATH=$NODE_PATH:./src node src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
