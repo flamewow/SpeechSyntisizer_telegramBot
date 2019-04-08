@@ -30,6 +30,7 @@
     "dev": "NODE_ENV=development NODE_PATH=$NODE_PATH:./src nodemon src",
     "rebuild": "rm -rf dist && babel src --out-dir dist --copy-files",
     "start": "NODE_ENV=development NODE_PATH=$NODE_PATH:./src node src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pm2:restart": "pm2 delete speechSyntisizer || : && pm2 start --name speechSyntisizer npm -- start"
   }
 }
